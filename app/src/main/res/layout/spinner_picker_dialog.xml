@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle_spinner_picker"
+        style="@style/Text_Bold_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_20" />
+
+    <com.wein_business.ui.controls.BottomSheetListView
+        android:id="@+id/listview_spinner_picker"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_200"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:divider="@color/gray_light"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/ripple_rectangle_blue"
+        android:scrollbars="none" />
+</LinearLayout>

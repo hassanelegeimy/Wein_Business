@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/main_padding">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="@dimen/dimen_100"
+                android:layout_height="@dimen/dimen_100"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:layout_marginBottom="@dimen/dimen_40"
+                android:src="@drawable/logo_wein" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfVMobile_register"
+                style="@style/TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:hint="@string/mobile"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="330dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/Text_Normal_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:textAlignment="viewStart" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_mobile_hint"
+                style="@style/Text_Normal_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:gravity="center"
+                android:text="@string/mobile_hint"
+                android:textColor="@color/hint" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfPassword_register"
+                style="@style/TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:hint="@string/password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/Text_Normal_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textAlignment="viewStart" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_accept"
+                    style="@style/Text_Normal_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agree"
+                    android:textColor="@color/textColor" />
+
+                <Button
+                    android:id="@+id/btnShowTerms_register"
+                    style="@style/Text_Bold_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dimen_5"
+                    android:background="@color/transparent"
+                    android:text="@string/wein_terms"
+                    android:foreground="@drawable/ripple_rectangle_blue"
+                    android:textColor="@color/textColor"
+                    android:textStyle="italic"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnVerifyMobile_register"
+                style="@style/Button_Bold_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:layout_marginBottom="@dimen/main_padding"
+                android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+                android:onClick="onClick"
+                android:text="@string/register" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_10"
+        android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+        app:cardBackgroundColor="@color/background"
+        app:cardCornerRadius="@dimen/dimen_20"
+        app:cardElevation="@dimen/dimen_5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_itemProductAttachment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@color/loading_view" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_attachments" />
+
+            <TextView
+                android:id="@+id/tvName_itemProductAttachment"
+                style="@style/Text_Normal_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_"
+                android:textColor="@color/textColorContent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageButton
+                android:id="@+id/btnAdd_itemProductAttachment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_attachment_button_height"
+                android:background="@color/button_attachment"
+                android:foreground="@drawable/ripple_rectangle_blue"
+                android:padding="@dimen/dimen_10"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:tint="@color/iconsButton" />
+
+            <ImageButton
+                android:id="@+id/btnDelete_itemProductAttachment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_attachment_button_height"
+                android:background="@color/button_attachment"
+                android:foreground="@drawable/ripple_rectangle_blue"
+                android:padding="@dimen/dimen_10"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:tint="@color/iconsButton" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
+

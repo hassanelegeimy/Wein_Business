@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/main_padding">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/dimen_100"
+        android:layout_height="@dimen/dimen_100"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginBottom="@dimen/dimen_40"
+        android:src="@drawable/logo_wein" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dimen_100"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_type_dimens"
+            android:layout_margin="@dimen/dimen_10"
+            android:layout_weight="1"
+            android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+            app:cardBackgroundColor="@color/background"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="@dimen/dimen_5">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnIndividual_userType"
+                style="@style/Text_Bold_default"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+                android:gravity="center"
+                android:padding="@dimen/dimen_20"
+                android:text="@string/user_provider_individual" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_type_dimens"
+            android:layout_margin="@dimen/dimen_10"
+            android:layout_weight="1"
+            android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+            app:cardBackgroundColor="@color/background"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="@dimen/dimen_5">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCompany_userType"
+                style="@style/Text_Bold_default"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:button="@null"
+                android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+                android:gravity="center"
+                android:padding="@dimen/dimen_20"
+                android:text="@string/user_provider_company" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

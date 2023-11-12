@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutMain_login"
+    android:orientation="vertical">
+
+    <include layout="@layout/banner_header" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/main_padding">
+
+        <ImageView
+            android:id="@+id/imageLogo_login"
+            android:layout_width="@dimen/dimen_100"
+            android:layout_height="@dimen/dimen_100"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:src="@drawable/logo_wein"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tfMobile_login"
+            style="@style/TextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_40"
+            android:hint="@string/mobile"
+            app:layout_constraintTop_toBottomOf="@id/imageLogo_login">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Text_Normal_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:textAlignment="viewStart" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_mobileHint_login"
+            style="@style/Text_Normal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:gravity="center"
+            android:text="@string/mobile_hint"
+            android:textColor="@color/hint"
+            app:layout_constraintTop_toBottomOf="@id/tfMobile_login"
+            app:layout_constraintEnd_toEndOf="@id/tfMobile_login"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tfPassword_login"
+            style="@style/TextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:hint="@string/password"
+            app:layout_constraintTop_toBottomOf="@id/tv_mobileHint_login">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Text_Normal_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textAlignment="viewStart" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnNewUser_login"
+            style="@style/Text_Bold_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_padding"
+            android:background="@color/transparent"
+            android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+            android:minHeight="0dp"
+            android:padding="@dimen/dimen_10"
+            android:text="@string/new_registration"
+            android:onClick="onClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tfPassword_login" />
+
+        <Button
+            android:id="@+id/btnReset_login"
+            style="@style/Text_Bold_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_padding"
+            android:background="@color/transparent"
+            android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+            android:minHeight="0dp"
+            android:padding="@dimen/dimen_10"
+            android:onClick="onClick"
+            android:text="@string/forget_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tfPassword_login" />
+
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/Button_Bold_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/main_padding"
+            android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+            android:onClick="onClick"
+            android:text="@string/login"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

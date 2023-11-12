@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Wein</string>
+
+    <!-- OnBoarding -->
+    <string-array name="onboarding_titles">
+        <item>عنوان 1</item>
+        <item>عنوان 2</item>
+        <item>عنوان 3</item>
+    </string-array>
+
+    <string-array name="onboarding_descriptions">
+        <item>وصف 1  وصف 1  وصف 1  وصف 1</item>
+        <item>وصف 2  وصف 2  وصف 2  وصف 2</item>
+        <item>وصف 3  وصف 3  وصف 3  وصف 3</item>
+    </string-array>
+
+    <!-- Main -->
+    <string name="nav_account">حسابي</string>
+    <string name="nav_products">أنشطتي</string>
+    <string name="nav_trips">رحلاتي القادمة</string>
+
+</resources>

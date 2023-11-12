@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dimen_20">
+
+        <ImageView
+            android:id="@+id/image_ticket_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_200"
+            android:scaleType="centerCrop"
+            android:src="@color/loading_view" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/main_padding">
+
+        <ImageView
+            android:id="@+id/imageQR_ticket_search"
+            android:layout_width="@dimen/dimen_100"
+            android:layout_height="@dimen/dimen_100"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/main_padding"
+            android:src="@drawable/ic_no_image" />
+
+        <TextView
+            android:id="@+id/tvQR_ticket_search"
+            style="@style/Text_Normal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/default_" />
+
+        <TextView
+            android:id="@+id/tvTitle_ticket_search"
+            style="@style/Text_Bold_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_padding"
+            android:text="@string/default_"
+            android:textAlignment="viewStart"
+            android:textColor="@color/blue_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="@dimen/dimen_80"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_5">
+
+                <TextView
+                    android:id="@+id/tvStartTime_ticket_search"
+                    style="@style/Text_Bold_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/default_"
+                    android:textColor="@color/blue_light"
+                    android:textSize="@dimen/text_xlarge" />
+
+                <TextView
+                    android:id="@+id/tvStartDate_ticket_search"
+                    style="@style/Text_Bold_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_"
+                    android:textColor="@color/textColor" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+                android:textColor="@color/textColor" />
+
+            <ImageView
+                style="@style/Text_Normal_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_next" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+                android:textColor="@color/textColor" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="@dimen/dimen_80"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_5">
+
+                <TextView
+                    android:id="@+id/tvEndTime_ticket_search"
+                    style="@style/Text_Bold_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/default_"
+                    android:textColor="@color/blue_light"
+                    android:textSize="@dimen/text_xlarge" />
+
+                <TextView
+                    android:id="@+id/tvEndDate_ticket_search"
+                    style="@style/Text_Bold_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_"
+                    android:textColor="@color/textColor" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen_5"
+            app:cardBackgroundColor="@color/background"
+            app:cardElevation="@dimen/dimen_5">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RvPrices_ticket_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/background"
+    android:padding="@dimen/main_padding"
+    android:weightSum="4">
+
+    <TextView
+        android:id="@+id/tvClass_item_ticket_priceclass"
+        style="@style/Text_Normal_default"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:includeFontPadding="false"
+        android:text="@string/default_"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blue_light"
+        android:textSize="@dimen/text_xlarge" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSeatsCount_item_ticket_priceclass"
+            style="@style/Text_Bold_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="@string/default_"
+            android:textSize="@dimen/text_xlarge" />
+
+        <TextView
+            style="@style/Text_Normal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/total_seats"
+            android:textColor="@color/textColor" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

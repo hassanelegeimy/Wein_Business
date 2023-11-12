@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/dimen_50"
+    android:paddingBottom="@dimen/dimen_50">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCamera_attachment_picker"
+        style="@style/Text_Normal_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20"
+        android:background="@drawable/border_gray_rounded_10"
+        android:drawableTop="@drawable/ic_camera"
+        android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+        android:padding="@dimen/dimen_5"
+        android:text="@string/picker_camera" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGallery_attachment_picker"
+        style="@style/Text_Normal_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20"
+        android:background="@drawable/border_gray_rounded_10"
+        android:drawableTop="@drawable/ic_gallery"
+        android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+        android:padding="@dimen/dimen_5"
+        android:text="@string/picker_gallery" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFile_attachment_picker"
+        style="@style/Text_Normal_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20"
+        android:background="@drawable/border_gray_rounded_10"
+        android:drawableTop="@drawable/ic_folder"
+        android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+        android:padding="@dimen/dimen_5"
+        android:text="@string/picker_folders" />
+
+
+</LinearLayout>

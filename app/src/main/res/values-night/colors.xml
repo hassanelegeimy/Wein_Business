@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Custom dark colors -->
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorSecondary">@color/gray</color>
+
+    <color name="buttonsText">@color/black</color>
+    <color name="background">@color/black</color>
+    <color name="iconsButton">@color/black</color>
+</resources>

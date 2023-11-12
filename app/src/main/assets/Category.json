@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "countryCode": 966 ,
+    "nameAr": "الغوص",
+    "nameEn": "Diving"
+  },
+  {
+    "id": 2,
+    "countryCode": 966 ,
+    "nameAr": "هايكنج",
+    "nameEn": "Hiyking"
+  },
+  {
+    "id": 3,
+    "countryCode": 966 ,
+    "nameAr": "رحلة بحرية",
+    "nameEn": "Sea Trip"
+  },
+  {
+    "id": 4,
+    "countryCode": 966 ,
+    "nameAr": "سفاري",
+    "nameEn": "Safari"
+  }
+]

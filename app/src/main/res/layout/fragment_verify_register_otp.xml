@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/main_padding">
+
+
+    <ImageView
+        android:layout_width="@dimen/dimen_100"
+        android:layout_height="@dimen/dimen_100"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_marginBottom="@dimen/dimen_40"
+        android:src="@drawable/logo_wein"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/Text_Normal_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/otp_title"
+        android:textColor="@color/textColor" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/pinViewOtp"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cursorVisible="true"
+        android:inputType="number"
+        android:layout_marginTop="@dimen/main_padding"
+        android:padding="@dimen/main_padding"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/text_xlarge"
+        android:textStyle="bold"
+        app:cursorColor="@color/textColor"
+        app:cursorWidth="@dimen/dimen_2"
+        app:hideLineWhenFilled="false"
+        app:itemCount="4"
+        app:itemHeight="@dimen/pinview_deimens"
+        app:itemSpacing="@dimen/main_padding"
+        app:itemWidth="@dimen/pinview_deimens"
+        app:lineColor="@color/borders"
+        app:lineWidth="2dp"
+        app:viewType="rectangle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_40"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Text_Normal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resend_otp_message"
+            android:textColor="@color/textColor" />
+
+        <Button
+            android:id="@+id/btnResendOtp"
+            style="@style/Text_Bold_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+            android:minHeight="0dp"
+            android:onClick="onClick"
+            android:padding="@dimen/dimen_10"
+            android:text="@string/resend_otp" />
+
+        <LinearLayout
+            android:id="@+id/layoutOtpTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Text_Normal_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/otp_wait"
+                android:textColor="@color/textColor" />
+
+            <TextView
+                android:id="@+id/tvOtpTimer"
+                style="@style/Text_Bold_xlarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layoutDirection="ltr"
+                android:text="@string/default_"
+                android:textColor="@color/textColor" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnVerifyOtp"
+        style="@style/Button_Bold_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/main_padding"
+        android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+        android:onClick="onClick"
+        android:text="@string/verify_otp"
+        android:textColor="@color/buttonsText" />
+</LinearLayout>

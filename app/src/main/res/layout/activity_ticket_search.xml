@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/banner_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_30">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnScan_ticket_search"
+            style="@style/Button_Bold_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_qr_scan"
+            android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+            android:onClick="onClick"
+            android:padding="@dimen/dimen_10"
+            android:text="@string/qr_scan" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_50"
+            android:layout_marginBottom="@dimen/dimen_50"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/icons" />
+
+            <TextView
+                style="@style/Text_Bold_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/main_padding"
+                android:text="@string/or"
+                android:textColor="@color/textColor" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/icons" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tfQrCode_ticket_search"
+            style="@style/TextInput"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_60"
+            android:hint="@string/qr_number_search">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Text_Normal_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="text"
+                android:onClick="onClick" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSearch_ticket_search"
+            style="@style/Button_Bold_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_padding"
+            android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+            android:onClick="onClick"
+            android:text="@string/qr_search" />
+    </LinearLayout>
+</LinearLayout>

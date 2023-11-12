@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefreshProvider_account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_10"
+                android:foreground="@drawable/ripple_rectangle_blue"
+                app:cardBackgroundColor="@color/background"
+                app:cardElevation="@dimen/dimen_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/main_padding">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_50"
+                        android:layout_height="@dimen/dimen_50"
+                        android:src="@drawable/logo_wein" />
+
+                    <TextView
+                        android:id="@+id/tvWelcomeProvider_account"
+                        style="@style/Text_Bold_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:text="@string/default_" />
+
+                    <TextView
+                        style="@style/Text_Normal_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:text="@string/profile_status_title" />
+
+                    <TextView
+                        android:id="@+id/tvStatusProvider_account"
+                        style="@style/Text_Bold_xlarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/default_" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnProfileProvider_account"
+                    style="@style/Button_Bold_default_no_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_menu_profile"
+                    android:drawableEnd="@drawable/ic_arrow_next"
+                    android:drawablePadding="@dimen/dimen_20"
+                    android:foreground="@drawable/ripple_rectangle_blue"
+                    android:minHeight="@dimen/dimen_50"
+                    android:padding="@dimen/dimen_5"
+                    android:text="@string/menu_profile"
+                    android:textAlignment="textStart" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnWalletProvider_account"
+                    style="@style/Button_Bold_default_no_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_menu_wallet"
+                    android:drawableEnd="@drawable/ic_arrow_next"
+                    android:drawablePadding="@dimen/dimen_20"
+                    android:foreground="@drawable/ripple_rectangle_blue"
+                    android:minHeight="@dimen/dimen_50"
+                    android:padding="@dimen/dimen_5"
+                    android:text="@string/menu_wallet"
+                    android:textAlignment="textStart" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnNotifications_account"
+                    style="@style/Button_Bold_default_no_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_menu_notification"
+                    android:drawableEnd="@drawable/ic_arrow_next"
+                    android:drawablePadding="@dimen/dimen_20"
+                    android:foreground="@drawable/ripple_rectangle_blue"
+                    android:minHeight="@dimen/dimen_50"
+                    android:padding="@dimen/dimen_5"
+                    android:text="@string/menu_notifications"
+                    android:textAlignment="textStart" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnComplaints_account"
+                    style="@style/Button_Bold_default_no_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_menu_complaint"
+                    android:drawableEnd="@drawable/ic_arrow_next"
+                    android:drawablePadding="@dimen/dimen_20"
+                    android:foreground="@drawable/ripple_rectangle_blue"
+                    android:minHeight="@dimen/dimen_50"
+                    android:padding="@dimen/dimen_5"
+                    android:text="@string/menu_complaints"
+                    android:textAlignment="textStart" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnContactUs_account"
+                    style="@style/Button_Bold_default_no_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_menu_contact_us"
+                    android:drawableEnd="@drawable/ic_arrow_next"
+                    android:drawablePadding="@dimen/dimen_20"
+                    android:foreground="@drawable/ripple_rectangle_blue"
+                    android:minHeight="@dimen/dimen_50"
+                    android:padding="@dimen/dimen_5"
+                    android:text="@string/menu_contact_us"
+                    android:textAlignment="textStart" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnChangeLang_account"
+                    style="@style/Button_Bold_default_no_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_menu_lang"
+                    android:drawableEnd="@drawable/ic_arrow_next"
+                    android:drawablePadding="@dimen/dimen_20"
+                    android:foreground="@drawable/ripple_rectangle_blue"
+                    android:minHeight="@dimen/dimen_50"
+                    android:padding="@dimen/dimen_5"
+                    android:text="@string/menu_lang"
+                    android:textAlignment="textStart" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnShareApp_account"
+                    style="@style/Button_Bold_default_no_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_menu_share"
+                    android:drawableEnd="@drawable/ic_arrow_next"
+                    android:drawablePadding="@dimen/dimen_20"
+                    android:foreground="@drawable/ripple_rectangle_blue"
+                    android:minHeight="@dimen/dimen_50"
+                    android:padding="@dimen/dimen_5"
+                    android:text="@string/menu_share_app"
+                    android:textAlignment="textStart" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRateApp_account"
+                    style="@style/Button_Bold_default_no_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_menu_rate_app"
+                    android:drawableEnd="@drawable/ic_arrow_next"
+                    android:drawablePadding="@dimen/dimen_20"
+                    android:foreground="@drawable/ripple_rectangle_blue"
+                    android:minHeight="@dimen/dimen_50"
+                    android:padding="@dimen/dimen_5"
+                    android:text="@string/menu_rate_app"
+                    android:textAlignment="textStart" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLogoutProvider_account"
+                    style="@style/Button_Bold_default_no_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_menu_logout"
+                    android:drawableEnd="@drawable/ic_arrow_next"
+                    android:drawablePadding="@dimen/dimen_20"
+                    android:foreground="@drawable/ripple_rectangle_blue"
+                    android:minHeight="@dimen/dimen_50"
+                    android:padding="@dimen/dimen_5"
+                    android:text="@string/menu_logout"
+                    android:textAlignment="textStart" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

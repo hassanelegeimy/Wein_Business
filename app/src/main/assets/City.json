@@ -1,0 +1,32 @@
+[
+  {
+    "id": 2,
+    "countryCode": 966 ,
+    "nameAr": "الرياض" ,
+    "nameEn": "Riyadh"
+  },
+  {
+    "id": 3,
+    "countryCode": 966 ,
+    "nameAr": "جدة" ,
+    "nameEn": "Jeddah"
+  },
+  {
+    "id": 4,
+    "countryCode": 966 ,
+    "nameAr": "القصيم" ,
+    "nameEn": "Qasim"
+  },
+  {
+    "id": 5,
+    "countryCode": 966 ,
+    "nameAr": "الدمام" ,
+    "nameEn": "Dammam"
+  },
+  {
+    "id": 6,
+    "countryCode": 966 ,
+    "nameAr": "مكة المكرمة" ,
+    "nameEn": "Makkah"
+  }
+]

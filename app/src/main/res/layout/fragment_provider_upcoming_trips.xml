@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefresh_provider_trips"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/main_padding"
+        android:paddingEnd="@dimen/main_padding">
+
+        <include layout="@layout/layout_data_error" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOpenAttendance_provider_upcoming_trips"
+            style="@style/Button_Bold_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/main_padding"
+            android:padding="@dimen/dimen_10"
+            android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+            android:text="@string/attendance_title"
+            android:drawablePadding="@dimen/main_padding"
+            android:drawableEnd="@drawable/ic_qr_scan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle_provider_trips"
+            style="@style/Text_Normal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trips_upcoming_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnOpenAttendance_provider_upcoming_trips" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV_provider_upcoming_trips"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/main_padding"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle_provider_trips" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

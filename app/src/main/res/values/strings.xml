@@ -1,0 +1,180 @@
+<resources>
+    <string name="app_name">Wein Business</string>
+
+    <string-array name="onboarding_titles">
+        <item>Title 1</item>
+        <item>Title 2</item>
+        <item>Title 3</item>
+    </string-array>
+
+    <string-array name="onboarding_descriptions">
+        <item>Description 1  Description 1  Description 1  Description 1</item>
+        <item>Description 2  Description 2  Description 2  Description 2</item>
+        <item>Description 3  Description 3  Description 3  Description 3</item>
+    </string-array>
+
+    <!-- Main -->
+    <string name="nav_account">Account</string>
+    <string name="nav_products">My Activities</string>
+    <string name="nav_trips">My Trips</string>
+
+    <!--NAV Home -->
+    <string name="welcome">حياك</string>
+
+    <!-- NAV Trips -->
+    <string name="trips_upcoming_title">رحلاتي القادمة</string>
+    <string name="attendance_title">تسجيل الحضور</string>
+
+    <!--NAV  Account -->
+    <string name="menu_notifications">الإشعارات</string>
+    <string name="menu_complaints">الشكاوى</string>
+    <string name="menu_contact_us">اتصل بنا</string>
+    <string name="menu_lang">اللغة</string>
+    <string name="menu_share_app">مشاركة</string>
+    <string name="menu_rate_app">تقييم التطبيق</string>
+    <string name="menu_login">تسجيل الدخول</string>
+    <string name="menu_profile">الملف الشخصي</string>
+    <string name="menu_wallet">المحفظة</string>
+    <string name="menu_logout">تسجيل الخروج</string>
+    <string name="profile_status_title">حالة الحساب</string>
+    <string name="status_undefined">غير معرف</string>
+    <!-- Login -->
+    <string name="login_title">دخول</string>
+    <string name="login">دخول</string>
+    <string name="mobile">رقم الجوال</string>
+    <string name="password">كلمة المرور</string>
+    <string name="new_registration">مستخدم جديد ؟</string>
+    <string name="new_provider">مزود خدمة جديد ؟</string>
+    <string name="forget_password">نسيت كلمة المرور ؟</string>
+    <string name="mobile_hint">صيغة رقم الجوال  05x xxx xxxx</string>
+
+    <!-- Registration -->
+    <string name="register_title">تسجيل</string>
+    <string name="register">تسجيل</string>
+
+    <string name="user_provider_individual">مزود خدمة \n فرد</string>
+    <string name="user_provider_company">مزود خدمة \n شركة</string>
+
+    <string name="agree">أوافق على</string>
+    <string name="wein_terms"><u>شروط وأحكام تطبيق وين</u></string>
+
+    <string name="error_terms">يجب أن توافق على شروط وأحكام تطبيق وين</string>
+
+    <!-- OTP -->
+    <string name="otp_title">أدخل رمز التحقق المرسل إلى جوالك</string>
+    <string name="verify_otp">تحقق</string>
+    <string name="resend_otp">إرسال رمز جديد</string>
+    <string name="resend_otp_message">لم يصلك رمز التحقق ؟</string>
+    <string name="otp_wait">برجاء الانتظار</string>
+
+    <!-- Profile -->
+    <string name="profile_percentage_title">نسبة اكتمال الملف</string>
+    <string name="profile_main_title">الأساسية</string>
+    <string name="profile_contact_title">التواصل</string>
+    <string name="profile_attachments_title">المرفقات</string>
+    <string name="mobile_profile">رقم الجوال *</string>
+    <string name="email">البريد الإلكتروني *</string>
+    <string name="city">المدينة *</string>
+    <string name="iban">رقم الحساب البنكي</string>
+    <string name="updateProfile">حفظ مؤقتا</string>
+    <string name="submitProfile">تقديم للمراجعة</string>
+    <!-- Profile Company-->
+    <string name="company_name">اسم الشركة *</string>
+    <string name="company_commercial_record">رقم السجل التجاري *</string>
+
+    <!-- Profile Individual-->
+    <string name="individual_name">الإسم كاملا *</string>
+    <string name="individual_id_number">رقم الهوية *</string>
+
+    <!--Create Update Products -->
+    <string name="create_update_product_title">إضافة وإدارة الفعالية</string>
+    <string name="product_title">عنوان الفعالية *</string>
+    <string name="product_category">نوع الفعالية *</string>
+    <string name="product_location">موقع الفعالية *</string>
+    <string name="product_description">وصف الفعالية *</string>
+    <string name="add_product">إرسال الطلب</string>
+    <string name="error_map_select_location">برجاء تحديد الموقع</string>
+
+    <string name="createUpdateProduct">حفظ مؤقتا</string>
+    <string name="submitProduct">تقديم للمراجعة</string>
+    <string name="product_show_trips">أوقات الفعالية والأسعار</string>
+
+    <string name="product_status_title">حالة الفعالية</string>
+    <string name="product_status_new">جديد</string>
+
+    <!-- ProductAttachment-->
+    <string name="product_attachments">فيديو وصور الفعالية</string>
+    <string name="attachment_image_master">الصورة الرئيسية</string>
+    <string name="attachment_image">صورة إضافية</string>
+    <string name="attachment_video">الفيديو</string>
+
+    <!--Trips -->
+    <string name="provider_product_trips_title">رحلات الفعالية</string>
+    <string name="riyal">ريال</string>
+    <string name="total_seats">مقعد</string>
+    <string name="reserved_seats">محجوز</string>
+
+    <!--Add Trip -->
+    <string name="add_trip_title">إضافة رحلة جديدة</string>
+
+    <string name="trip_date">تاريخ الرحلة</string>
+    <string name="trip_time">وقت الرحلة</string>
+    <string name="trip_start_date">تاريخ البداية *</string>
+    <string name="trip_end_date">تاريخ الانتهاء *</string>
+    <string name="trip_start_time">وقت البداية *</string>
+    <string name="trip_end_time">وقت الانتهاء *</string>
+    <string name="trip_price_class">فئة السعر</string>
+    <string name="trip_price">السعر</string>
+    <string name="trip_seats">عدد المقاعد</string>
+
+    <string name="trip_price_class_standard">عادي</string>
+
+    <!-- Qr Scan -->
+    <string name="qr_scan">مسح الكود</string>
+    <string name="qr_search">بحـث</string>
+    <string name="qr_number_search">أدخل رقم الكود</string>
+
+    <!-- Attachemnt picker-->
+    <string name="picker_camera">الكاميرا</string>
+    <string name="picker_gallery">الصور</string>
+    <string name="picker_folders">الملفات</string>
+
+    <!--Alert Dialog Messages-->
+    <string name="alert_submit_profile">يجب التأكد من صحة جميع البيانات ومن إدخال جميع المرفقات المطلوبة وفي حالة الاستمرار سيكون الطلب تحت المراجعة من قبل الأدمن ولن يمكنك إجراء أي تعديلات حتى يتم الموافقة</string>
+    <string name="alert_submit_product">يجب التأكد من صحة جميع البيانات ومن إدخال فيديو وصور النشاط وفي حالة الاستمرار سيكون طلب انشاء النشاط تحت المراجعة من قبل الأدمن ولن يمكنك إضافة رحلات النشاط حتى يتم الموافقة</string>
+
+    <!-- General-->
+    <string name="default_">--</string>
+    <string name="next">Next</string>
+    <string name="start">Start</string>
+    <string name="ok">موافق</string>
+    <string name="cancel">إلغاء</string>
+    <string name="choose">اختر </string>
+    <string name="exit_message">Press again to exit</string>
+    <string name="confirm">تأكيد</string>
+    <string name="price_start">تبدأ من %s ريال</string>
+    <string name="submit">إرسال</string>
+    <string name="save">حفظ</string>
+    <string name="save_submit">حفظ و إرسال</string>
+    <string name="or">أو</string>
+
+    <string name="gps_settings">GPS Settings</string>
+    <string name="gps_settings_text">Unable to Locate your Location, go to Settings?</string>
+    <string name="open_settings">Open Settings</string>
+
+    <!-- General Errors   -->
+    <string name="no_data">No data</string>
+    <string name="no_connection">No Internet Connection</string>
+    <string name="error_api_msg">An error occured , it will be fixed soon</string>
+    <string name="error_unexpected">تم رصد خطأ تقني وجاري العمل على حله في أسرع وقت</string>
+    <string name="storage_write_deny_permisssion">Application need Permission to access files, please enable the permission from settings</string>
+    <string name="error_google_play_services">Google Play Service is not installed in this device. Please install it first</string>
+
+    <string name="session_expired">Session expired , please login again</string>
+
+    <string name="error_not_active_provider">لا يمكن اضافة نشاط جديد . يجب أن تكون حالة الحساب نشطة. برجاء مراجعة ملفك الشخصي</string>
+
+
+    <!-- Validation Errors -->
+    <string name="validation_qr_code">الرجاء ادخال رقم الكود</string>
+</resources>

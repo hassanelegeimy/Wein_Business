@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:name=".BaseApp"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Wein"
+        android:usesCleartextTraffic="true"
+        tools:replace="theme"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.activity.LauncherActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.OnboardingActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.RegisterActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.profile.CompanyProfileActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.profile.IndividualProfileActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.CreateUpdateProductActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.ProviderProductTripsActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.AddTripActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.TicketSearchActivity"
+            android:exported="true" />
+
+
+        <activity
+            android:name=".ui.activity.MapPickerActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.ImagesViewerActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.VideoPlayerActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:exported="true"
+            android:screenOrientation="sensor"
+            android:theme="@style/Theme.Wein.FullScreen" />
+
+        <activity
+            android:name=".ui.activity.QrScannerActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Wein.FullScreen" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAjqauylxL0_zym6LzLAZRrCYHKGZRp0eo" />
+        <!--android:value="AIzaSyAEIMFFUiBeMTS_RwFnHAF4SWnbYeQFxfE"-->
+
+        <service
+            android:name=".services.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/blue_light" />
+    </application>
+
+</manifest>

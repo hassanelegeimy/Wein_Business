@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/map_picker"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_location_map"
+        app:layout_constraintBottom_toTopOf="@id/tv_map_pin_helper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_map_pin_helper"
+        style="@style/Text_Bold_xlarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_padding"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/btn_select_location"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnCurrentLocation_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_primary_rounded_10"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+            android:onClick="onClick"
+            android:src="@drawable/ic_current_location" />
+
+
+        <ImageButton
+            android:id="@+id/btnMapView_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_padding"
+            android:background="@drawable/border_primary_rounded_10"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+            android:onClick="onClick"
+            android:src="@drawable/ic_earth" />
+
+        <ImageButton
+            android:id="@+id/btnSatelliteView_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_padding"
+            android:background="@drawable/border_primary_rounded_10"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+            android:onClick="onClick"
+            android:src="@drawable/ic_satellite" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_select_location"
+        style="@style/Button_Bold_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_80"
+        android:layout_marginEnd="@dimen/dimen_80"
+        android:layout_marginBottom="@dimen/main_padding"
+        android:foreground="@drawable/ripple_rectangle_blue_radius_10"
+        android:onClick="onClick"
+        android:text="@string/confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
