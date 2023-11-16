@@ -9,12 +9,11 @@ import android.view.inputmethod.InputMethodManager
 import androidx.activity.result.ActivityResultLauncher
 import androidx.appcompat.app.AppCompatActivity
 import com.wein_business.BaseApp
+import com.wein_business.R
 import com.wein_business.ui.activity.*
-import com.wein_business.ui.activity.QrScannerActivity
 import com.wein_business.ui.activity.profile.CompanyProfileActivity
 import com.wein_business.ui.activity.profile.IndividualProfileActivity
 import com.wein_business.utils.*
-import com.wein_business.R
 
 open class GenericActivity : AppCompatActivity() {
 
@@ -193,6 +192,12 @@ open class GenericActivity : AppCompatActivity() {
         loaderDialog.hide()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        if (loaderDialog != null && loaderDialog.isShowing()) {
+            loaderDialog.cancel()
+        }
+    }
     //**************************************************************
 
     fun animateScreenTransition() {

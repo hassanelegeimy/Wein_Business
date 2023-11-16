@@ -57,6 +57,6 @@ class OnboardingActivity : GenericActivity() {
         if (pager_onboarding.currentItem < 2)//0 or 1
             pager_onboarding.currentItem = pager_onboarding.currentItem + 1
         else
-            activityMain()
+            activityLogin(false)
     }
 }

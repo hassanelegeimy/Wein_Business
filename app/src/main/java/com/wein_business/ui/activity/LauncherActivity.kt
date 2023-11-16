@@ -14,12 +14,13 @@ class LauncherActivity : GenericActivity() {
         setContentView(R.layout.activity_launcher)
 
         Handler(Looper.getMainLooper()).postDelayed({
+            //TODO OPEN ONBOARDING FIRST
+//                activityOnBoarding()
+
             if (SessionManager.isGuest)
                 activityLogin(false)
             else
                 activityMain()
-            //TODO OPEN ONBOARDING FIRST
-            // activityOnBoarding()
 
         }, 1000)
     }

@@ -1,6 +1,5 @@
 package com.wein_business.ui.fragment.main
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -26,19 +25,21 @@ class AccountProviderFragment : GenericFragment(),
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        activity = requireActivity() as MainActivity
 
         providerStatusProvider = ProviderStatusProvider(this)
     }
-
 
     override fun onResume() {
         super.onResume()
         bindUser()
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        activity = requireActivity() as MainActivity
+    override fun onHiddenChanged(hidden: Boolean) {
+        super.onHiddenChanged(hidden)
+        if (!hidden && isResumed) {
+            onResume()
+        }
     }
 
     override fun onCreateView(
@@ -51,14 +52,9 @@ class AccountProviderFragment : GenericFragment(),
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        bindUI(view)
         bindUser()
         initListeners()
         loadData()
-    }
-
-    private fun bindUI(view: View) {
-
     }
 
     private fun bindUser() {

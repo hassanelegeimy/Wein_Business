@@ -11,81 +11,74 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
-import androidx.viewpager2.widget.ViewPager2
+import androidx.fragment.app.Fragment
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.messaging.ktx.messaging
 import com.wein_business.R
 import com.wein_business.ui.activity.generic.GenericActivity
-import com.wein_business.ui.adapters.pager.MainPagerAdapter
 import com.wein_business.ui.fragment.main.*
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.banner_navigation.*
 
 class MainActivity : GenericActivity() {
 
-    private var navAdapter: MainPagerAdapter? = null
-    var providerProductsFragment: ProviderProductsFragment? = null
-    var providerUpcomingTripsFragment: ProviderUpcomingTripsFragment? = null
+    private val providerProductsFragment = ProviderProductsFragment()
+    private val providerUpcomingTripsFragment = ProviderUpcomingTripsFragment()
+    private val accountProviderFragment = AccountProviderFragment()
+
+    var active: Fragment = providerProductsFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         bindUI()
-        bindUser()
 
         //TODO
         askNotificationPermission()
-
     }
 
     private fun bindUI() {
-
+        initNavigationMenu()
     }
 
-    private fun bindUser() {
-        initPager()
+
+    private fun initNavigationMenu() {
+       supportFragmentManager.beginTransaction().add(R.id.layout_main_container, accountProviderFragment, "3").hide(accountProviderFragment).commit();
+       supportFragmentManager.beginTransaction().add(R.id.layout_main_container, providerUpcomingTripsFragment, "2").hide(providerUpcomingTripsFragment).commit();
+       supportFragmentManager.beginTransaction().add(R.id.layout_main_container, providerProductsFragment, "1").commit();
+
+        initListeners()
     }
 
-    private fun initPager() {
-        navAdapter = MainPagerAdapter(supportFragmentManager, lifecycle)
-        pager_main.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-        pager_main.adapter = navAdapter
-        pager_main.currentItem = navAdapter!!.positionProducts
-        pager_main.offscreenPageLimit = 3
-        pager_main.isUserInputEnabled = false
-
-        pager_main.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
+    private fun initListeners() {
+        bottomNavigation_main.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_products -> navAction(providerProductsFragment)
+                R.id.nav_trips -> navAction(providerUpcomingTripsFragment)
+                R.id.nav_account -> navAction(accountProviderFragment)
             }
-        })
-    }
-
-    //***********************************************************************************
-    //***********************************************************************************
-
-    fun onClick(view: View) {
-        when (view) {
-            Rb_navigationProducts -> pager_main.currentItem = navAdapter!!.positionProducts
-            Rb_navigationTrips -> pager_main.currentItem = navAdapter!!.positionTRIPS
-            Rb_navigationAccount -> pager_main.currentItem = navAdapter!!.positionACCOUNT
+            return@setOnItemSelectedListener true
         }
     }
+
+    private fun navAction(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().hide(active).show(fragment).commit()
+        active = fragment
+    }
+
+    //***********************************************************************************
+    //***********************************************************************************
 
     override fun onBackPressed() {
-        when (pager_main.currentItem) {
-            navAdapter!!.positionProducts -> providerProductsFragment!!.onBackPressed()//homeFragment?.onBackPressed()
-            else -> navHome()
-        }
-    }
-
-    private fun navHome() {
-        Rb_navigationProducts.performClick()
+        if (active is ProviderProductsFragment)
+            providerProductsFragment.onBackPressed()
+        else
+            bottomNavigation_main.findViewById<View>(R.id.nav_products).performClick()
     }
 
     //***********************************************************************************
-    //***********************************************************************************
+    //** Notifications ******************************************************************
 
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -95,9 +88,12 @@ class MainActivity : GenericActivity() {
             Toast.makeText(this, "Notifications permission granted", Toast.LENGTH_SHORT)
                 .show()
         } else {
-            Toast.makeText(this, "FCM can't post notifications without POST_NOTIFICATIONS permission",
-                Toast.LENGTH_LONG).show()
-        }}
+            Toast.makeText(
+                this, "FCM can't post notifications without POST_NOTIFICATIONS permission",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+    }
 
     @RequiresApi(Build.VERSION_CODES.M)
     private fun askNotificationPermission() {
@@ -111,9 +107,11 @@ class MainActivity : GenericActivity() {
             } else {
                 // Directly ask for the permission
                 requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
-            } }}
+            }
+        }
+    }
 
-    private fun getFirebaseToken(){
+    private fun getFirebaseToken() {
         Firebase.messaging.token.addOnCompleteListener(OnCompleteListener { task ->
             if (!task.isSuccessful) {
                 Log.w(TAG, "Fetching FCM registration token failed", task.exception)
@@ -125,7 +123,5 @@ class MainActivity : GenericActivity() {
             Log.d(TAG, "Firebase getTokenMain: $token")
         })
     }
-
-
 
 }

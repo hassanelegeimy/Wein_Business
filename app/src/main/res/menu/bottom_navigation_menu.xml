@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_products"
+        android:icon="@drawable/nav_products"
+        android:title="@string/nav_products" />
+
+    <item
+        android:id="@+id/nav_trips"
+        android:icon="@drawable/nav_trips"
+        android:title="@string/nav_trips" />
+
+    <item
+        android:id="@+id/nav_account"
+        android:icon="@drawable/nav_account"
+        android:title="@string/nav_account" />
+</menu>

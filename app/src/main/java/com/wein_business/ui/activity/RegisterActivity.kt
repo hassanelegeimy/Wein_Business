@@ -47,6 +47,7 @@ class RegisterActivity : GenericActivity(), OnClickListener {
         pager_register.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         pager_register.adapter = registerPagerAdapter
         pager_register.currentItem = POSITION_USER_TYPE
+        pager_register.offscreenPageLimit = 2
         pager_register.isUserInputEnabled = false
     }
 

@@ -33,14 +33,9 @@ class ProviderUpcomingTripsFragment : DataFragment(),
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        activity = requireActivity() as MainActivity
 
         providerUpcomingTripsProvider = ProviderUpcomingTripsProvider(this);
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        activity = requireActivity() as MainActivity
-        activity.providerUpcomingTripsFragment = this
     }
 
     override fun onCreateView(

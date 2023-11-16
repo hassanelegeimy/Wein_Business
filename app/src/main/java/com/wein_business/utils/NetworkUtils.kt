@@ -23,6 +23,7 @@ object NetworkUtils {
             return  getString(R.string.session_expired)
         }
         //TODO HANDLE 404 CRASH
+        //TODO HANDLE 403 forbidden CRASH
 
         val responseBody = response.errorBody()
         if (responseBody != null) {

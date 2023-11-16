@@ -35,6 +35,7 @@ class ProviderProductsFragment : DataFragment(),
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        activity = requireActivity() as MainActivity
 
         providerProductsProvider = ProviderProductsProvider(this)
     }
@@ -50,10 +51,11 @@ class ProviderProductsFragment : DataFragment(),
         }
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        activity = requireActivity() as MainActivity
-        activity.providerProductsFragment = this
+    override fun onHiddenChanged(hidden: Boolean) {
+        super.onHiddenChanged(hidden)
+        if (!hidden && isResumed) {
+            onResume()
+        }
     }
 
     override fun onCreateView(

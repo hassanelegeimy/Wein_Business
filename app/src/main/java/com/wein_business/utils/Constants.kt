@@ -6,8 +6,8 @@ object Constants {
     const val APP_PLATFORM = "ANDROID"
 
     //********************** SESSION ***************************
-    private const val BASE_URL_STAGING = "http://68.178.167.129:8081/wein/api/"
-    private const val BASE_URL_PRODUCTION = "http://68.178.167.129:8081/wein/api/"
+    private const val BASE_URL_STAGING = "http://68.178.167.129:8081/weinBusiness/api/"
+    private const val BASE_URL_PRODUCTION = "http://68.178.167.129:8081/weinBusiness/api/"
 
     private const val isProductionEnvironment //= true       //PRODUCTION
             = false      //STAGING

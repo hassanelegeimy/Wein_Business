@@ -2,60 +2,42 @@
 <resources>
     <!-- Custom dimensions -->
     <dimen name="banner_height">@dimen/dimen_50</dimen>
-    <dimen name="dimen_back_button">@dimen/dimen_45</dimen>
     <dimen name="main_padding">@dimen/dimen_10</dimen>
-    <dimen name="item_sliders_height">@dimen/dimen_250</dimen>
-    <dimen name="dimen_home_category">@dimen/dimen_150</dimen>
-    <dimen name="dimen_category">@dimen/dimen_200</dimen> <!--height-->
+    <!--height-->
     <dimen name="dimen_product_height">@dimen/dimen_200</dimen>
-    <dimen name="dimen_media_height">@dimen/dimen_250</dimen>
     <dimen name="dimen_attachment_button_height">@dimen/dimen_50</dimen>
-    <dimen name="dimen_trip_date">@dimen/dimen_80</dimen>
-    <dimen name="dimen_trip_time">@dimen/dimen_80</dimen>
 
 
     <dimen name="user_type_dimens">@dimen/dimen_120</dimen>
-    <dimen name="gender_dimens">@dimen/dimen_100</dimen>
     <dimen name="pinview_deimens">@dimen/dimen_50</dimen>
 
     <dimen name="text_xlarge">@dimen/dimen_text_22</dimen>
     <dimen name="text_large">@dimen/dimen_text_18</dimen>
     <dimen name="text_default">@dimen/dimen_text_16</dimen>
-    <dimen name="text_small">@dimen/dimen_text_14</dimen>
     <dimen name="text_tiny">@dimen/dimen_text_12</dimen>
 
     <!-- dimensions -->
     <dimen name="dimen_2">2dp</dimen>
     <dimen name="dimen_3">3dp</dimen>
     <dimen name="dimen_5">5dp</dimen>
-    <dimen name="dimen_8">8dp</dimen>
     <dimen name="dimen_10">10dp</dimen>
     <dimen name="dimen_15">15dp</dimen>
     <dimen name="dimen_20">20dp</dimen>
-    <dimen name="dimen_22">22dp</dimen>
     <dimen name="dimen_25">25dp</dimen>
     <dimen name="dimen_30">30dp</dimen>
     <dimen name="dimen_40">40dp</dimen>
-    <dimen name="dimen_45">45dp</dimen>
     <dimen name="dimen_50">50dp</dimen>
     <dimen name="dimen_60">60dp</dimen>
-    <dimen name="dimen_70">70dp</dimen>
     <dimen name="dimen_80">80dp</dimen>
     <dimen name="dimen_90">90dp</dimen>
     <dimen name="dimen_100">100dp</dimen>
     <dimen name="dimen_120">120dp</dimen>
-    <dimen name="dimen_140">140dp</dimen>
-    <dimen name="dimen_150">150dp</dimen>
     <dimen name="dimen_200">200dp</dimen>
-    <dimen name="dimen_250">250dp</dimen>
 
     <dimen name="dimen_text_22">22sp</dimen>
     <dimen name="dimen_text_18">18sp</dimen>
     <dimen name="dimen_text_16">16sp</dimen>
-    <dimen name="dimen_text_15">15sp</dimen>
-    <dimen name="dimen_text_14">14sp</dimen>
     <dimen name="dimen_text_12">12sp</dimen>
-    <dimen name="dimen_text_10">10sp</dimen>
 
 
 </resources>
